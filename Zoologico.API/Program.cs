@@ -37,11 +37,19 @@ namespace Zoologico.API
             var app = builder.Build();
 
             // Configure the HTTP request pipeline.
-            if (app.Environment.IsDevelopment())
-            {
-                app.UseSwagger();
-                app.UseSwaggerUI();
-            }
+            //if (app.Environment.IsDevelopment())
+            /* lo mejor es quitar las llaves que tambien rodean a los usos de swagger , app.UseSwagger y app.UseSwaggerUI para un 
+               codigo mas limpio y es una buena practica tener swagger en todos los entornos */
+
+            //{
+            //    app.UseSwagger();
+            //    app.UseSwaggerUI();
+            //}
+
+
+            //nos quedaria asi , sin las llaves y sin el if
+            app.UseSwagger();
+            app.UseSwaggerUI();
 
             app.UseHttpsRedirection();
 
